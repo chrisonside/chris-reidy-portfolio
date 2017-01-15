@@ -1,0 +1,17 @@
+/**
+*
+* Page width constrain. Set the max and minimum width and use `@extend %constrain` to constrain the width.
+*
+**/
+
+$layout-max-width: 1024px;
+
+%constrain {
+    max-width: $layout-max-width;
+    margin: 0 auto;
+}
+
+body {
+    @include font-size(16);
+    font-family: $font-primary;
+}
