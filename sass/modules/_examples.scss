@@ -1,0 +1,46 @@
+.examples {
+	background: tomato;
+}
+
+.examples__container {
+	@extend %constrain;
+}
+
+.examples_header {
+	// Extend heading here
+}
+
+.example {
+	@extend %vertical-rhythm;
+	@extend %standard-paddding;
+	background-color: $colour-white;
+	@extend .grid;
+}
+
+.example__image {
+	@extend .grid__item;
+	width: 100%;
+	height: auto;
+
+	@include media(">=tablet") {
+		width: 50%;
+	}
+}
+
+.example__description {
+	@extend .grid__item;
+	width: 100%;
+	@extend %standard-paddding;
+
+	@include media(">=tablet") {
+		width: 50%;
+	}
+}
+
+.example__title {
+	// Extend header here
+}
+
+.example__intro {
+	// Extend 
+}

@@ -15,3 +15,57 @@ body {
     @include font-size(16);
     font-family: $font-primary;
 }
+
+/**
+*
+* Vertical rhythm
+*
+**/
+
+%vertical-rhythm {
+    margin-bottom: $vertical-rhythm;    
+}
+
+/**
+*
+* Padding settings
+*
+**/
+
+%standard-paddding {
+    padding: $padding-small-screens;
+    @include media(">=desktop") {
+        padding: $padding-large-screens;
+    }
+}
+
+/**
+*
+* Font sizes
+*
+**/
+
+h1 {
+	@include font-size(30);
+	@include line-height(35);
+}
+
+h2 {
+	@include font-size(26);
+	@include line-height(31);
+}
+
+h3 {
+	@include font-size(24);
+	@include line-height(28);
+}
+
+h4 {
+	@include font-size(21);
+	@include line-height(25);
+}
+
+p {
+	@include font-size(18);
+	@include line-height(25);
+}

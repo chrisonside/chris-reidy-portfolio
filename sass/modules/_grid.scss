@@ -1,0 +1,15 @@
+
+// If this works out, put it into the mixins folder!! 
+
+
+.grid {
+	@extend %constrain;
+	font-size: 0;
+}
+
+.grid__item {
+	display: inline-block;
+	vertical-align: top;
+	height: 0;
+	border: 1px solid tomato;
+}

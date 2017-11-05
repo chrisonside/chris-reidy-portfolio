@@ -1,0 +1,25 @@
+.skills {
+	background: royalblue;
+}
+
+.skills__container {
+	@extend .grid;
+}
+
+.skills_header {
+	// Extend heading here
+}
+
+.skill {
+	@extend .grid__item;
+
+	@include media(">=largephone") {
+		width: 25%;
+		padding-bottom: 25%;
+	}
+
+	@include media(">=desktop") {
+		width: 50%;
+		padding-bottom: 25%;
+	}
+}

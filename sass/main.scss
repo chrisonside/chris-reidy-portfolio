@@ -12,4 +12,10 @@
 @import 'global/_global';
 
 // Import modules
-// e.g. @import 'modules/_nav';
+@import 'modules/_grid';
+@import 'modules/_nav';
+@import 'modules/_hero';
+@import 'modules/_skills';
+@import 'modules/_examples';
+@import 'modules/_bio';
+@import 'modules/_contact';

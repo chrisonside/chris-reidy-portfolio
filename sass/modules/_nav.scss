@@ -1,0 +1,26 @@
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 20px;
+	text-align: right;
+	background: $colour-black;
+}
+	
+.nav__items {
+	list-style-type: none;
+	font-size: 0;
+}
+
+.nav__item {
+	@include font-size(16);
+	@include font-size(18);
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+}
+
+.nav__link {
+	color: $colour-white;
+	text-decoration: none;
+}

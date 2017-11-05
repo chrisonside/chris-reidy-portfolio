@@ -1,0 +1,32 @@
+
+.hero {
+	height: 0;
+	width: 100%;
+	padding-bottom: 100%;
+	background: #000 url('/img/beachpic--largemobiles.jpg') left top / 100% auto no-repeat;
+}
+
+#bgvid {
+    display: none;
+}
+
+@include media(">=desktop") {
+
+	.hero {
+		background: none;
+	}
+
+	#bgvid { 
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: -100;
+		transform: translateX(-50%) translateY(-50%);
+		background: url('/img/beachpic_video_backup.jpg') no-repeat;
+		background-size: cover; 
+	}
+}
