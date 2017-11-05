@@ -20,70 +20,138 @@
     </head>
     <body>
      
-        <nav class="navigation">
-        	<ul class="navigation__items">
-        		<li class="navigation__item"><a class="navigation__link" href="#">Skills</a></li>
-        		<li class="navigation__item"><a class="navigation__link" href="#">Work</a></li>
-        		<li class="navigation__item"><a class="navigation__link" href="#">Bio</a></li>
-        		<li class="navigation__item"><a class="navigation__link" href="#">Contact</a></li>
+       <!--  <nav class="nav">
+        	<ul class="nav__items">
+        		<li class="nav__item"><a class="nav__link" href="#">Skills</a></li>
+        		<li class="nav__item"><a class="nav__link" href="#">Work</a></li>
+        		<li class="nav__item"><a class="nav__link" href="#">Bio</a></li>
+        		<li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
         	</ul>
-        </nav>
+        </nav> -->
 
 		<header id="hero" class="hero">
-			
-			<div class="video__container">
-			    <video class="hero__video" poster="" width="320" height="240" autoplay loop>
-			        <source src="https://vimeo.com/199051759" type="video/mp4">
-			    </video>
-			</div>
+
+			<!-- Background video on desktop -->
+
+			<video playsinline autoplay muted loop poster="/img/beachpic_video_backup.jpg" id="bgvid">
+			<!-- Need to insert webM here! -->
+			<!-- <source src="" type="video/webm"> -->
+				<source src="/media/beachvideo.mp4" type="video/mp4">
+			</video>
 		
 			<div class="hero__text">
 				<h1 class="hero__heading">Chris Reidy - Front End Web Developer</h1>
-				<p class="hero__intro">Hi, I'm a London based developer who...</p>
 			</div>
 
 		</header>
 
 		<section id="skills" class="skills">
-			
-			<div class="skill">HTML</div>
-			<div class="skill">CSS</div>
-			<div class="skill">JavaScript</div>
-			<div class="skill">Other</div>
+
+			<div class="skills__container">
+
+				<div class="skills__header">Key skills</div>
+				
+				<div class="skill">
+					<h2 class="skill__title">
+						HTML
+					</h2>
+				</div>
+
+				<!-- Interest two -->
+				<div class="skill">
+					<h2 class="skill__title">
+						CSS
+					</h2>
+				</div>
+
+				<!-- Interest three -->
+				<div class="skill">
+					<h2 class="skill__title">
+						JavaScript
+					</h2>
+				</div>
+
+				<!-- Interest four -->
+				<div class="skill">
+					<h2 class="skill__title">
+						Performance
+					</h2>
+				</div>
+
+			</div>
 
 		</section>
 
-		<section id="work" class="work">
-			
-			<h2 class="work__heading"></h2>
-			<p class="work__intro"></p>
+		<!-- Examples of my work -->
+		<section id="examples" class="examples">
 
-			<div class="work__example">McCain</div>
-			<div class="work__example">Twingo</div>
-			<div class="work__example">Will's site</div>
-			<div class="work__example--codepen">Codepen link</div>
+			<div class="examples__container">
+				
+				<div class="examples__header">Examples of my work</div>
+			
+				<!-- Example one -->
+				<div class="example">
+					<img class="example__image" src="http://www.fillmurray.com/800/450" alt="">
+					<div class="example__description">
+						<h3 class="example__title">Huawei</h3>
+						<p class="example__intro">Blah blah</p>
+					</div>
+				</div>
+
+				<!-- Example two -->
+				<div class="example">
+					<img class="example__image" src="http://www.fillmurray.com/800/450" alt="">
+					<div class="example__description">
+						<h3 class="example__title">English Trainer in London</h3>
+						<p class="example__intro">Blah blah</p>
+					</div>
+				</div>
+
+				<p class="example__others">
+					I've also built sites from scratch for brands including Renault, McCain, eBay, Cetaphil and Huawei.
+				</p>
+
+			</div>
 
 		</section>
 
-		<section id="bio" class="bio">
+		<!-- Interests -->
+		<section id="interests" class="interests grid">
 			
-			<h2 class="bio__heading">About me</h2>
-			<p class="bio__intro">What I enjoy doing in my spare time&hellip;</p>
+			<div class="interests__header">What I get up to outside of work</div>
 
-			<div class="bio__clock"></div>
+			<!-- Interest one -->
+			<div class="grid__item grid__item--one">
+				Self-improvment
+			</div>
 
-			<ul class="bio__interests">
-				<li class="bio__interest">Travel</li>
-				<li class="bio__interest"></li>
-				<li class="bio__interest"></li>
-			</ul>
+			<!-- Interest two -->
+			<div class="grid__item grid__item--two">
+				Travel
+			</div>
+
+			<!-- Interest three -->
+			<div class="grid__item grid__item--three">
+				Football
+			</div>
+
+			<!-- Interest four -->
+			<div class="grid__item grid__item--four">
+				Bambino
+			</div>
 
 		</section>
+
 
 		<section id="contact" class="contact">
+
+			<h4 class="contact__heading">Still here? Thanks!</h4>
+
+			<p class="contact__intro">Hire me!</p>
+
+			<a class="contact__email" href="mailto:christopher.t.reidy@gmail.com?Subject=Hi%20Chris" target="_top">christopher.t.reidy@gmail.com</a>
 			
-			<div class="contact__email">christopher.t.reidy@gmail.com</div>
-			<a class="contact__linkedin" href="https://www.linkedin.com/in/chrisreidy">LinkedIn</a>
+			<a class="contact__linkedin" href="https://www.linkedin.com/in/chrisreidy">Or via LinkedIn</a>
 
 		</section>
 		
