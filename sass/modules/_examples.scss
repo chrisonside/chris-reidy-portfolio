@@ -1,46 +1,35 @@
 .examples {
-	background: tomato;
+	background: $colour-white;
 }
 
 .examples__container {
 	@extend %constrain;
 }
 
-.examples_header {
-	// Extend heading here
-}
-
 .example {
 	@extend %vertical-rhythm;
-	@extend %standard-paddding;
 	background-color: $colour-white;
 	@extend .grid;
 }
 
 .example__image {
-	@extend .grid__item;
 	width: 100%;
-	height: auto;
+	@extend %vertical-rhythm;
 
 	@include media(">=tablet") {
+		display: inline-block;
+		vertical-align: top;
 		width: 50%;
+		margin-bottom: 0;
 	}
 }
 
 .example__description {
-	@extend .grid__item;
-	width: 100%;
-	@extend %standard-paddding;
 
 	@include media(">=tablet") {
+		display: inline-block;
+		vertical-align: top;
 		width: 50%;
+		padding: 15px;
 	}
-}
-
-.example__title {
-	// Extend header here
-}
-
-.example__intro {
-	// Extend 
 }

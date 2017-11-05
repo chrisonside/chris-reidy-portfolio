@@ -1,0 +1,42 @@
+.contact {
+	position: relative;
+	overflow: hidden;
+}
+
+.contact__container {
+	@extend %constrain;
+}
+
+.contact__details {
+	@extend %vertical-rhythm;
+}
+
+.contact__image {
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 0 auto;
+
+	/* for alt text */
+	line-height: 150px; 
+	text-align: center;
+	color: $colour-white;
+
+	background: royalblue;
+
+	@include media(">=tablet") {
+		position: absolute;
+		top: 100%;
+		right: 25px;
+		animation: slideup 2s ease 1;
+		animation-fill-mode: forwards;
+	}
+
+}
+
+@keyframes slideup {
+	100% {
+		transform: translate(0, -120%);
+	}
+}

@@ -1,19 +1,22 @@
 .skills {
-	background: royalblue;
+	background: lightblue;
 }
 
 .skills__container {
 	@extend .grid;
 }
 
-.skills_header {
-	// Extend heading here
-}
-
 .skill {
 	@extend .grid__item;
+	width: 50%;
+	padding-bottom: 25%;
 
 	@include media(">=largephone") {
+		width: 50%;
+		padding-bottom: 50%;
+	}
+
+	@include media(">=tablet") {
 		width: 25%;
 		padding-bottom: 25%;
 	}

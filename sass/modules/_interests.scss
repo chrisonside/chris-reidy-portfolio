@@ -1,0 +1,18 @@
+.interests {
+	background: skyblue;
+}
+
+.interests__container {
+	@extend .grid;
+}
+
+.interest {
+	@extend .grid__item;
+	@extend %vertical-rhythm;
+
+	@include media(">=largephone") {
+		width: 50%;
+		padding-bottom: 50%;
+		margin-bottom: 0;
+	}
+}

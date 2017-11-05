@@ -31,17 +31,16 @@
 
 		<header id="hero" class="hero">
 
-			<!-- Background video on desktop -->
+			<div class="hero__text">
+				<h1 class="hero__heading">Chris Reidy <br>Front End Web Developer</h1>
+			</div>
 
+			<!-- Background video on desktop -->
 			<video playsinline autoplay muted loop poster="/img/beachpic_video_backup.jpg" id="bgvid">
 			<!-- Need to insert webM here! -->
 			<!-- <source src="" type="video/webm"> -->
 				<source src="/media/beachvideo.mp4" type="video/mp4">
 			</video>
-		
-			<div class="hero__text">
-				<h1 class="hero__heading">Chris Reidy - Front End Web Developer</h1>
-			</div>
 
 		</header>
 
@@ -49,33 +48,33 @@
 
 			<div class="skills__container">
 
-				<div class="skills__header">Key skills</div>
+				<h2 class="skills__header">Key skills</h2>
 				
 				<div class="skill">
-					<h2 class="skill__title">
+					<h3 class="skill__title">
 						HTML
-					</h2>
+					</h3>
 				</div>
 
 				<!-- Interest two -->
 				<div class="skill">
-					<h2 class="skill__title">
+					<h3 class="skill__title">
 						CSS
-					</h2>
+					</h3>
 				</div>
 
 				<!-- Interest three -->
 				<div class="skill">
-					<h2 class="skill__title">
+					<h3 class="skill__title">
 						JavaScript
-					</h2>
+					</h3>
 				</div>
 
 				<!-- Interest four -->
 				<div class="skill">
-					<h2 class="skill__title">
+					<h3 class="skill__title">
 						Performance
-					</h2>
+					</h3>
 				</div>
 
 			</div>
@@ -87,11 +86,11 @@
 
 			<div class="examples__container">
 				
-				<div class="examples__header">Examples of my work</div>
+				<h2 class="examples__header">Examples of my work</h2>
 			
 				<!-- Example one -->
 				<div class="example">
-					<img class="example__image" src="http://www.fillmurray.com/800/450" alt="">
+					<img class="example__image" src="/img/bill-800450.jpg" alt="">
 					<div class="example__description">
 						<h3 class="example__title">Huawei</h3>
 						<p class="example__intro">Blah blah</p>
@@ -100,7 +99,7 @@
 
 				<!-- Example two -->
 				<div class="example">
-					<img class="example__image" src="http://www.fillmurray.com/800/450" alt="">
+					<img class="example__image" src="/img/bill-800450.jpg" alt="">
 					<div class="example__description">
 						<h3 class="example__title">English Trainer in London</h3>
 						<p class="example__intro">Blah blah</p>
@@ -116,28 +115,44 @@
 		</section>
 
 		<!-- Interests -->
-		<section id="interests" class="interests grid">
-			
-			<div class="interests__header">What I get up to outside of work</div>
+		<section id="interests" class="interests">
 
-			<!-- Interest one -->
-			<div class="grid__item grid__item--one">
-				Self-improvment
-			</div>
+			<div class="interests__container">
+				
+				<h2 class="interests__header">What I get up to outside of work</h2>
 
-			<!-- Interest two -->
-			<div class="grid__item grid__item--two">
-				Travel
-			</div>
+				<!-- Interest one -->
+				<div class="interest">
+					<h3 class="interest__title">
+						Self-improvment
+					</h3>
+					<p class="interest__intro">Blah blah</p>
+				</div>
 
-			<!-- Interest three -->
-			<div class="grid__item grid__item--three">
-				Football
-			</div>
+				<!-- Interest two -->
+				<div class="interest">
+					<h3 class="interest__title">
+						Travel
+					</h3>
+					<p class="interest__intro">Blah blah</p>
+				</div>
 
-			<!-- Interest four -->
-			<div class="grid__item grid__item--four">
-				Bambino
+				<!-- Interest three -->
+				<div class="interest">
+					<h3 class="interest__title">
+						Footie
+					</h3>
+					<p class="interest__intro">Blah blah</p>
+				</div>
+
+				<!-- Interest four -->
+				<div class="interest">
+					<h3 class="interest__title">
+						Bambino
+					</h3>
+					<p class="interest__intro">Blah blah</p>
+				</div>
+				
 			</div>
 
 		</section>
@@ -145,13 +160,20 @@
 
 		<section id="contact" class="contact">
 
-			<h4 class="contact__heading">Still here? Thanks!</h4>
+			<div class="contact__container">
 
-			<p class="contact__intro">Hire me!</p>
+				<h4 class="contact__heading">Still here? Thanks!</h4>
 
-			<a class="contact__email" href="mailto:christopher.t.reidy@gmail.com?Subject=Hi%20Chris" target="_top">christopher.t.reidy@gmail.com</a>
-			
-			<a class="contact__linkedin" href="https://www.linkedin.com/in/chrisreidy">Or via LinkedIn</a>
+				<p class="contact__intro">Hire me!</p>
+
+				<div class="contact__details">
+					<a class="contact__email" href="mailto:christopher.t.reidy@gmail.com?Subject=Hi%20Chris" target="_top">christopher.t.reidy@gmail.com</a>
+					<a class="contact__linkedin" href="https://www.linkedin.com/in/chrisreidy">Or via LinkedIn</a>
+				</div>
+
+			</div>
+
+			<img src="http://www.fillmurray.com/300/300" alt="Chris Reidy" class="contact__image">
 
 		</section>
 		

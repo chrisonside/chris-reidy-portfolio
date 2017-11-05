@@ -1,3 +1,7 @@
+$vertical-rhythm: 20px;
+$padding-small-screens: 15px;
+$padding-large-screens: 25px;
+
 /**
 *
 * Page width constrain. Set the max and minimum width and use `@extend %constrain` to constrain the width.
@@ -32,11 +36,21 @@ body {
 *
 **/
 
-%standard-paddding {
+%standard-padding {
     padding: $padding-small-screens;
     @include media(">=desktop") {
         padding: $padding-large-screens;
     }
+}
+
+/**
+*
+* Standard section padding
+*
+**/
+
+section {
+	padding: $padding-small-screens*3 $padding-small-screens;
 }
 
 /**
@@ -46,26 +60,47 @@ body {
 **/
 
 h1 {
-	@include font-size(30);
-	@include line-height(35);
+	@include font-size(26);
+	@include line-height(31);
+	@extend %vertical-rhythm;
+	@include media(">=tablet") {
+		@include font-size(30);
+		@include line-height(35);
+	}
 }
 
 h2 {
-	@include font-size(26);
-	@include line-height(31);
+	@include font-size(22);
+	@include line-height(26);
+	@extend %vertical-rhythm;
+	@include media(">=tablet") {
+		@include font-size(26);
+		@include line-height(31);
+	}
 }
 
 h3 {
-	@include font-size(24);
-	@include line-height(28);
+	@include font-size(21);
+	@include line-height(25);
+	@extend %vertical-rhythm;
+	@include media(">=tablet") {
+		@include font-size(24);
+		@include line-height(28);
+	}
 }
 
 h4 {
-	@include font-size(21);
-	@include line-height(25);
+	@include font-size(19);
+	@include line-height(23);
+	@extend %vertical-rhythm;
+	@include media(">=tablet") {
+		@include font-size(21);
+		@include line-height(25);
+	}
 }
 
 p {
 	@include font-size(18);
 	@include line-height(25);
+	@extend %vertical-rhythm;
 }

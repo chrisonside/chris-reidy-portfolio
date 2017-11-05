@@ -1,9 +1,19 @@
 
 .hero {
-	height: 0;
 	width: 100%;
-	padding-bottom: 100%;
+	height: 0;
+	padding: 0 15px 75%;
 	background: #000 url('/img/beachpic--largemobiles.jpg') left top / 100% auto no-repeat;
+
+	/* Set up the 16:9 video size */
+	@include media(">=desktop") {
+		padding-bottom: 56.25%;
+	}
+}
+
+.hero__text {
+	color: $colour-white;
+	padding-top: $padding-small-screens*2;
 }
 
 #bgvid {
@@ -16,7 +26,8 @@
 		background: none;
 	}
 
-	#bgvid { 
+	#bgvid {
+		display: block;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -30,3 +41,18 @@
 		background-size: cover; 
 	}
 }
+
+/*<header id="hero" class="hero">
+
+			<div class="hero__text">
+				<h1 class="hero__heading">Chris Reidy - Front End Web Developer</h1>
+			</div>
+
+			<!-- Background video on desktop -->
+			<video playsinline autoplay muted loop poster="/img/beachpic_video_backup.jpg" id="bgvid">
+			<!-- Need to insert webM here! -->
+			<!-- <source src="" type="video/webm"> -->
+				<source src="/media/beachvideo.mp4" type="video/mp4">
+			</video>
+
+		</header>*/
