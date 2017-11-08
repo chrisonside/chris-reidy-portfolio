@@ -1,5 +1,5 @@
 // Initialize all of our variables
-var concat, gulp, gutil, sass, uglify, minifyCSS, browserSync, autoprefixer, sourceMaps, plumber;
+var autoprefixer, babel, browserSync, concat, gulp, gutil, minifyCSS, plumber, sass, sourceMaps, uglify;
 
 // Set up autoprefixer options
 var autoPrefixBrowserList = ['last 2 versions', 'safari 5', 'ie 9', 'opera 12.1', 'iOS >= 6', 'android 4'];
@@ -8,6 +8,7 @@ var autoPrefixBrowserList = ['last 2 versions', 'safari 5', 'ie 9', 'opera 12.1'
 gulp        = require('gulp');
 gutil       = require('gulp-util');
 concat      = require('gulp-concat');
+babel		= require('gulp-babel');
 uglify      = require('gulp-uglify');
 sass        = require('gulp-sass');
 sourceMaps  = require('gulp-sourcemaps');
@@ -37,8 +38,12 @@ gulp.task('scripts', function() {
 	// grab dev Scripts
 	return gulp.src(scriptFiles)
 		.pipe(sourceMaps.init())
-		//prevent pipe breaking caused by errors from gulp plugins
+		// Prevent pipe breaking caused by errors from gulp plugins
 		.pipe(plumber())
+		// Run Babel compiler to transform ES2105 JavaScript into something supported by older browsers  
+		.pipe(babel({
+            presets: ['es2015']
+        }))
 		// This will be name of our concatonated JS file
 		.pipe(concat('main.js'))
 		// Write the Sourcemap
@@ -55,6 +60,9 @@ gulp.task('scripts', function() {
 gulp.task('scripts-deploy', function() {
 	return gulp.src(scriptFiles)
 		.pipe(plumber())
+		.pipe(babel({
+            presets: ['es2015']
+        }))
 		.pipe(concat('main.js'))
 		// Compress the JS
 		.pipe(uglify())
