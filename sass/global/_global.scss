@@ -18,6 +18,8 @@ $layout-max-width: 1024px;
 body {
     @include font-size(16);
     font-family: $font-primary;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /**
@@ -60,18 +62,20 @@ section {
 **/
 
 h1 {
-	@include font-size(26);
-	@include line-height(31);
+	@include font-size(45);
+	@include line-height(52);
 	@extend %vertical-rhythm;
+	font-family: $font-title;
+	font-weight: $font-weight-ultra-bold;
 	@include media(">=tablet") {
-		@include font-size(30);
-		@include line-height(35);
+		@include font-size(85);
+		@include line-height(92);
 	}
 }
 
 h2 {
 	@include font-size(22);
-	@include line-height(26);
+	@include line-height(29);
 	@extend %vertical-rhythm;
 	@include media(">=tablet") {
 		@include font-size(26);
