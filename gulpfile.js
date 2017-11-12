@@ -44,6 +44,11 @@ gulp.task('scripts', function() {
 		.pipe(babel({
             presets: ['es2015']
         }))
+        .on('error', function(e) {
+		  console.log('>>> ERROR', e);
+		  // emit here
+		  this.emit('end');
+		})
 		// This will be name of our concatonated JS file
 		.pipe(concat('main.js'))
 		// Write the Sourcemap
