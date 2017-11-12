@@ -1,5 +1,5 @@
 .examples {
-	background: $colour-white;
+	background: $bg-two;
 }
 
 .examples__container {
@@ -10,6 +10,13 @@
 	@extend %vertical-rhythm;
 	background-color: $colour-white;
 	@extend .grid;
+
+	/* Switch order of content in first row */
+	&:first-of-type {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: flex-start;
+	}
 }
 
 .example__image {

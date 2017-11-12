@@ -18,6 +18,7 @@ $layout-max-width: 1024px;
 body {
     @include font-size(16);
     font-family: $font-primary;
+    color: #333;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
