@@ -67,7 +67,7 @@ h1 {
 	@include line-height(52);
 	@extend %vertical-rhythm;
 	font-family: $font-title;
-	font-weight: $font-weight-ultra-bold;
+	font-weight: $font-weight-extra-bold;
 	@include media(">=tablet") {
 		@include font-size(85);
 		@include line-height(92);
