@@ -1,6 +1,15 @@
 .contact {
 	position: relative;
 	overflow: hidden;
+	background: $bg-four;
+	color: $colour-white;
+
+	&.is-in-view {
+		.contact__image {
+			animation: slideup 1s ease 0.5s;
+			animation-fill-mode: forwards;
+		}
+	}
 }
 
 .contact__container {
@@ -9,6 +18,11 @@
 
 .contact__details {
 	@extend %vertical-rhythm;
+}
+
+.contact__email,
+.contact__linkedin {
+	color: $colour-white;
 }
 
 .contact__image {
@@ -29,13 +43,16 @@
 		position: absolute;
 		top: 100%;
 		right: 25px;
-		animation: slideup 2s ease 1;
-		animation-fill-mode: forwards;
+		// animation: slideup 2s ease 1;
 	}
 
 }
 
 @keyframes slideup {
+	70% {
+		transform: translate(0, -130%);
+	}
+
 	100% {
 		transform: translate(0, -120%);
 	}
