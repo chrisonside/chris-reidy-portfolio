@@ -1,5 +1,6 @@
 .interests {
 	background: $colour-white;
+	padding-top: $padding-small-screens;
 }
 
 .interests__container {
@@ -7,6 +8,7 @@
 }
 
 .interest {
+	/* This aint working!!! Ditch the grid for flex... */
 	@extend .grid__item;
 	@extend %vertical-rhythm;
 
@@ -15,4 +17,23 @@
 		padding-bottom: 50%;
 		margin-bottom: 0;
 	}
+
+	@include media(">=desktop") {
+		width: 25%;
+		height: auto;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+}
+
+.interest__placeholder {
+	width: 100%;
+	height: 0;
+	padding-bottom: 75%;
+	@extend %vertical-rhythm;
+}
+
+.interest__image {
+	width: 100%;
+	transition: $standard-transition;
 }
