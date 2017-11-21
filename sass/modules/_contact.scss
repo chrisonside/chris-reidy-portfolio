@@ -1,8 +1,10 @@
 .contact {
-	position: relative;
-	overflow: hidden;
 	background: $bg-four;
 	color: $colour-white;
+	/* Lessen padding in this section, to allow for height of inner container, 
+	which was given a min-height to account for sliding in roundel bio pic */
+	padding-top: $vertical-rhythm*2;
+	padding-bottom: $vertical-rhythm*2;
 
 	&.is-in-view {
 		.contact__image {
@@ -14,15 +16,31 @@
 
 .contact__container {
 	@extend %constrain;
+	position: relative;
+	overflow: hidden;
+	/* Allow room for animation of bio pic that slides in */
+	min-height: 165px;
 }
 
 .contact__details {
 	@extend %vertical-rhythm;
 }
 
+.contact__text {
+	position: relative;
+}
+
+.contact__icon {
+	position: absolute;
+	width: 45px;
+	height: 55px;
+	top: -12px;
+}
+
 .contact__email,
 .contact__linkedin {
 	color: $colour-white;
+	padding-left: 55px;
 }
 
 .contact__image {
@@ -50,10 +68,10 @@
 
 @keyframes slideup {
 	70% {
-		transform: translate(0, -130%);
+		transform: translate(0, -110%);
 	}
 
 	100% {
-		transform: translate(0, -120%);
+		transform: translate(0, -105%);
 	}
 }
