@@ -1,0 +1,12 @@
+.about {
+	background: $bg-three;
+	color: $colour-white;
+}
+
+.about__container {
+	@extend %constrain;
+}
+
+.about__intro {
+	margin-bottom: 0;
+}
