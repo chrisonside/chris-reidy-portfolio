@@ -53,7 +53,7 @@ body {
 **/
 
 section {
-	padding: $padding-small-screens*3 $padding-small-screens;
+	padding: $padding-small-screens*4 $padding-small-screens;
 }
 
 /**
@@ -78,6 +78,8 @@ h2 {
 	@include font-size(22);
 	@include line-height(29);
 	@extend %vertical-rhythm;
+	font-family: $font-title;
+	font-weight: $font-weight-extra-bold;
 	@include media(">=tablet") {
 		@include font-size(26);
 		@include line-height(31);
@@ -85,12 +87,14 @@ h2 {
 }
 
 h3 {
-	@include font-size(21);
-	@include line-height(25);
+	@include font-size(22);
+	@include line-height(29);
 	@extend %vertical-rhythm;
+	font-family: $font-title;
+	font-weight: $font-weight-extra-bold;
 	@include media(">=tablet") {
-		@include font-size(24);
-		@include line-height(28);
+		@include font-size(31);
+		@include line-height(36);
 	}
 }
 
@@ -98,6 +102,8 @@ h4 {
 	@include font-size(19);
 	@include line-height(23);
 	@extend %vertical-rhythm;
+	font-family: $font-title;
+	font-weight: $font-weight-extra-bold;
 	@include media(">=tablet") {
 		@include font-size(21);
 		@include line-height(25);
@@ -109,3 +115,11 @@ p {
 	@include line-height(25);
 	@extend %vertical-rhythm;
 }
+
+/**
+*
+* Transition effect
+*
+**/
+
+$standard-transition: all .3s ease-in-out;
