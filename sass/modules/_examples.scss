@@ -20,12 +20,12 @@
 
 .examples__grid {
 	@extend .grid;
-	padding-bottom: $padding-small-screens*3;
+	padding-bottom: $padding-small-screens*5;
 }
 
 .example {
 	@extend %vertical-rhythm;
-	background: $bg-three;
+	background: $bg-four;
 	@extend .grid__item;
 	width: 48%;
 	padding-bottom: 0;
