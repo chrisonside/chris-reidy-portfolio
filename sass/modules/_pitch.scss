@@ -1,0 +1,12 @@
+.pitch {
+	background: $bg-three;
+	color: $colour-white;
+}
+
+.pitch__container {
+	@extend %constrain;
+}
+
+.pitch__intro {
+	margin-bottom: 0;
+}
