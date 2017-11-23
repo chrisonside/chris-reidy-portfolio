@@ -1,6 +1,20 @@
+/**
+*
+* Consistent margin bottom and padding
+*
+**/
+
 $vertical-rhythm: 20px;
 $padding-small-screens: 15px;
 $padding-large-screens: 25px;
+
+/**
+*
+* Transition effect
+*
+**/
+
+$standard-transition: all .3s ease-in-out;
 
 /**
 *
@@ -115,11 +129,3 @@ p {
 	@include line-height(25);
 	@extend %vertical-rhythm;
 }
-
-/**
-*
-* Transition effect
-*
-**/
-
-$standard-transition: all .3s ease-in-out;
