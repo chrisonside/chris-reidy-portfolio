@@ -1,5 +1,5 @@
 // Initialize all of our variables
-var autoprefixer, babel, browserSync, concat, gulp, gutil, minifyCSS, plumber, sass, sourceMaps, uglify;
+var autoprefixer, babel, browserSync, concat, gulp, gutil, minifyCSS, plumber, sass, sourceMaps, uglify, pa11y;
 
 // Set up autoprefixer options
 var autoPrefixBrowserList = ['last 2 versions', 'safari 5', 'ie 9', 'opera 12.1', 'iOS >= 6', 'android 4'];
@@ -16,6 +16,7 @@ minifyCSS   = require('gulp-cssmin');
 browserSync = require('browser-sync');
 autoprefixer = require('gulp-autoprefixer');
 plumber     = require('gulp-plumber');
+pa11y 		= require('gulp-pa11y');
 
 // Config which js script files to include in my concatonation
 var scriptFiles = ['js/vendor/*.js', '!js/vendor/html5shiv.min.js', 'js/modules/**/*.js', 'js/main.js'];
@@ -41,13 +42,11 @@ gulp.task('scripts', function() {
 		// Prevent pipe breaking caused by errors from gulp plugins
 		.pipe(plumber())
 		// Run Babel compiler to transform ES2105 JavaScript into something supported by older browsers  
-		.pipe(babel({
-            presets: ['es2015']
-        }))
-        .on('error', function(e) {
-		  console.log('>>> ERROR', e);
-		  // emit here
-		  this.emit('end');
+		.pipe(babel({presets: ['es2015']}))
+		.on('error', function(e) {
+			console.log('>>> ERROR', e);
+			// emit here
+			this.emit('end');
 		})
 		// This will be name of our concatonated JS file
 		.pipe(concat('main.js'))
@@ -65,9 +64,7 @@ gulp.task('scripts', function() {
 gulp.task('scripts-deploy', function() {
 	return gulp.src(scriptFiles)
 		.pipe(plumber())
-		.pipe(babel({
-            presets: ['es2015']
-        }))
+		.pipe(babel({presets: ['es2015']}))
 		.pipe(concat('main.js'))
 		// Compress the JS
 		.pipe(uglify())
@@ -131,6 +128,16 @@ gulp.task('styles-deploy', function() {
 		.pipe(gulp.dest('dist/css'));
 });
 
+// Configure Pa11y accessibilty check
+gulp.task('pa11y', pa11y({ 
+	url: 'http://localhost:3000',
+	// fail the build if pa11y finds an error
+	failOnError: true, 
+	// just show errors, don't worry about warnings and notices
+	showFailedOnly: true, 
+	// where to report errors 
+	reporter: 'console'}));
+
 // This is our master task when you run `gulp` in CLI / Terminal
 // So this default task:
 // spins up a browserSync web server for your dev work
@@ -144,4 +151,4 @@ gulp.task('default', ['browserSync', 'scripts', 'styles'], function() {
 });
 
 // This is our deployment task, which uglifies/minifies our files ready for production
-gulp.task('deploy', ['scripts-deploy', 'styles-deploy']);
+gulp.task('deploy', ['scripts-deploy', 'styles-deploy', 'pa11y']);
