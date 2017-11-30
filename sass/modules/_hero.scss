@@ -1,15 +1,16 @@
 .hero {
 
-	/* First set up ratio sizes for hero section */
-	width: 100%;
-	height: 0;
-	padding-bottom: 100%;
-	position: relative;
-	overflow: hidden;
+	height: 100vh;
 
-	@include media(">=desktop") {
-		height: 80vh;
-		padding-bottom: 0;
+	/* Background color overlay to make white text more visible */
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.15);
 	}
 
 	/* Now insert the bg image - promoting this to it's own layer for smooth scrolling */
@@ -20,25 +21,16 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: $colour-black url('/img/bgimage__1000x1000.jpg') no-repeat center center;
+		
+		background: $colour-black url('/img/annie-spratt-294450.jpg') no-repeat center center;
 		background-size: cover;
 		z-index: -$z-index-level-1;
 		will-change: transform;
 
 		@include media(">=tablet") {
-			background: $colour-black url('/img/bgimage__1500x750.jpg') no-repeat center center;
+			background: $colour-black url('/img/annie-spratt-294450.jpg') no-repeat center center;
+			background-size: cover;
 		}
-	}
-
-	/* Background color overlay */
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(20,190,204,0.8);
 	}
 }
 
@@ -56,4 +48,14 @@
 
 .hero__intro {
 	color: $colour-white;
+}
+
+.hero__arrow {
+	fill: $colour-white;
+    width: 27px;
+    height: 18px;
+    position: absolute;
+    bottom: $padding-small-screens*4;
+    left: 50%;
+    margin-left: -13px;
 }
