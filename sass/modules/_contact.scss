@@ -3,11 +3,12 @@
 	color: $colour-white;
 	/* Lessen padding in this section, to allow for height of inner container, 
 	which was given a min-height to account for sliding in roundel bio pic */
-	padding-top: $vertical-rhythm*2;
-	padding-bottom: $vertical-rhythm*2;
+	// padding-top: $vertical-rhythm*2;
+	padding-top: 0;
+	padding-bottom: 0;
 
 	&.is-in-view {
-		.contact__image {
+		.contact__pic-holder {
 			animation: slideup 1s ease 0.5s;
 			animation-fill-mode: forwards;
 		}
@@ -23,11 +24,15 @@
 }
 
 .contact__details {
-	@extend %vertical-rhythm;
+	margin-bottom: $vertical-rhythm*3
 }
 
 .contact__text {
 	position: relative;
+}
+
+.contact__heading {
+	margin-top: $vertical-rhythm*3;
 }
 
 .contact__icon {
@@ -43,35 +48,33 @@
 	padding-left: 55px;
 }
 
-.contact__image {
+
+.contact__pic-holder {
 	display: inline-block;
 	width: 150px;
 	height: 150px;
+	line-height: 150px;
 	border-radius: 50%;
 	margin: 0 auto;
-
-	/* for alt text */
-	line-height: 150px; 
+	background-color: $bg-two;
 	text-align: center;
-	color: $colour-white;
+	color: $colour-grey;
 
-	background: royalblue;
 
 	@include media(">=tablet") {
 		position: absolute;
 		top: 100%;
 		right: 25px;
-		// animation: slideup 2s ease 1;
 	}
 
 }
 
 @keyframes slideup {
 	70% {
-		transform: translate(0, -110%);
+		transform: translate(0, -135%);
 	}
 
 	100% {
-		transform: translate(0, -105%);
+		transform: translate(0, -125%);
 	}
 }
