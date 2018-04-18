@@ -1,17 +1,5 @@
 .examples {
-	background: $colour-white;
-	// color: $colour-white;
-	padding-top: $padding-small-screens;
-
-	/* Horizontal divider line */
-	&:after {
-		display: block;
-		content: '';
-		width: 40%;
-		height: 4px;
-		background: $bg-four;
-		margin: 0 auto;
-	}
+	background: #f9f6f6;
 }
 
 .examples__container {
@@ -20,7 +8,7 @@
 
 .examples__grid {
 	@extend .grid;
-	padding-bottom: $padding-small-screens*5;
+	margin-bottom: 10px;
 }
 
 .example {

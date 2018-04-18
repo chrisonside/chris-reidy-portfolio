@@ -1,0 +1,51 @@
+// Props to Paul Lewis technique - https://www.youtube.com/watch?v=Mhnj3PiPnZw
+
+/* So this is the overlay container */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden; // To avoid scrollbars when we have something translated over to the side
+	pointer-events: none; 
+	/* We want it primed and ready to go. So we don't want it out of the render tree, as then when we needed it we'd need to trigger layout, styles and then paint the thing. So best to keep it in the flow, but toggle pointer events to auto when it's ready to be clicked. You don't have to have all elements primed and ready to go like this, but a side nav does fall into this category. */
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(255,105,180,0.4);
+		opacity: 0;
+		/* Create another compositor layer, and a stacking context */
+		will-change: opacity;
+		transition: opacity 0.3s cubic-bezier(0,0,0.25,1);
+	}
+
+	&--is-visible {
+		pointer-events: auto;
+		&:before {
+			opacity: 1;
+		}
+	}
+}
+
+.overlay__slider {
+	position: relative;
+	width: 70%;
+	background: pink;
+	height: 100%;
+	// display: flex;
+ //  	flex-direction: column;
+	transform: translateX(-100%);
+	/* Also promote this element to it's own compositor layer */
+	will-change: transform;
+	transition: transform 0.2s cubic-bezier(0,0,0.25,1);
+}
+
+
+// transform: 0, opacity 1;

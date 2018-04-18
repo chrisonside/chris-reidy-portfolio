@@ -107,8 +107,8 @@ h3 {
 	font-family: $font-title;
 	font-weight: $font-weight-extra-bold;
 	@include media(">=tablet") {
-		@include font-size(31);
-		@include line-height(36);
+		@include font-size(28);
+		@include line-height(34);
 	}
 }
 
