@@ -1,6 +1,5 @@
 .about {
 	background: $colour-white;
-	padding-top: $padding-small-screens;
 	
 	&.is-in-view {
 		// .about__image:nth-child(odd) {
@@ -17,100 +16,27 @@
 	margin-bottom: $vertical-rhythm*2;
 }
 
-.about__images {
-	position: relative;
-	margin-bottom: $vertical-rhythm*2;
-	width: 100%;
-	height: 0;
-	padding-bottom: 25%;
-}
-
-.about__pic {
-	position: absolute;
-	height: auto;
-
-	&--one {
-		width: 24%;
-		left: 0%;
-		top: 0;
-		z-index: 0;	
-	}
-	&--two {
-		width: 28%;
-		left: 22%;
-		top: 5%;
-		z-index: $z-index-level-1;	
-	}
-	&--three {
-		width: 23%;
-		left: 48%;
-		top: 8%;
-		z-index: $z-index-level-2;
-	}
-	&--four {
-		width: 35%;
-	    left: 65%;
-	    top: -7%;
-	    z-index: 0;
-	}
-	
-}
-
 .about__intro {
 	display: inline-block;
 	vertical-align: middle;
 	width: 65%;
 }
 
-.about__cv-holder {
+.about__pic-holder {
 	display: inline-block;
 	vertical-align: middle;
 	width: 35%;
 	margin-left: -4px;
+	text-align: center;
 }
 
-.about__cv {
+.about__pic {
+	display: inline-block;
 	width: 200px;
 	height: 200px;
-	line-height: 200px;
 	border-radius: 50%;
-	background-color: $bg-two;
-	margin: 0 auto;
-	text-align: center;
-	color: white;
+	background-color: $bg-three;
+	/* For alt text positioning */
+	line-height: 200px;
+	color: $colour-white;
 }
-
-/* Handle animation of images as section scrolls into view - needs to be DRY!!!!!!! */
-
-/* Set up common animation used by skills circles */
-
-// %slideIntoView {
-// 	animation-name: slideDownIntoPlace;
-// 	animation-timing-function: ease-in-out;
-// 	animation-duration: 0.4s;
-// 	animation-fill-mode: forwards;
-// }
-
-// /* Animations */
-// @keyframes slideDownIntoPlace {
-
-// 	0% {
-// 	    transform: translate(3%, 3%);
-// 	    opacity: 0.0;
-// 	}
-
-// 	60% {
-// 	    transform: translate(2%, -5%);
-// 	}
-
-// 	80% {
-// 	    transform: translate(1%, -3%);
-// 	    opacity: 1;
-// 	}
-
-// 	100% {
-// 	    transform: translateY(0, 0);
-// 	    opacity: 1;
-// 	}
-
-// }
