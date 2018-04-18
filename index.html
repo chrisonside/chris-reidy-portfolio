@@ -21,29 +21,43 @@
 		<![endif]-->
     </head>
     <body>
+
+    	<aside class="js-overlay overlay">
+
+			<div class="js-overlay-slider overlay__slider">
+				<button class="js-overlay-hide overlay__hide">Close</button>
+				<header class="overlay__header">This is the overlay</header>
+				<p>Blurb about this site</p>
+			</div>
+
+    	</aside>
      
-       <!--  <nav class="nav">
+        <nav class="nav">
         	<ul class="nav__items">
-        		<li class="nav__item"><a class="nav__link" href="#">Skills</a></li>
-        		<li class="nav__item"><a class="nav__link" href="#">Work</a></li>
-        		<li class="nav__item"><a class="nav__link" href="#">Bio</a></li>
-        		<li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+        		<li class="nav__item"><a class="nav__link" href="#skills">Skills</a></li>
+        		<li class="nav__item"><a class="nav__link" href="#examples">Examples</a></li>
+        		<li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+        		<li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
         	</ul>
-        </nav> -->
+        </nav>
 
 		<header id="hero" class="hero">
 
 			<div class="hero__text">
-				<h1 class="hero__heading">Chris Reidy <br>Front End Developer</h1>
-				<p class="hero__intro">London based Front End Web Developer.<br>Learn something new every day.</p>
+				<h1 class="hero__heading">Chris Reidy<br>Front End Developer</h1>
+				<!-- <h2 class="hero__intro">London, UK<br>Aliquam posuere augue sem.</h2> -->
 			</div>
+
+			<svg class="hero__arrow">
+				<polygon points="0 2 2.1 0 12 10.6 21.9 0 24 2 12 14.9 0 2"/>
+			</svg>
 
 		</header>
 
 		<section id="pitch" class="pitch">
 		
 			<div class="pitch__container">
-				<p class="pitch__intro">Hi my name's Chris blah blah. I'm a London based front-end developer with experience of <strong>building campaign websites for big brands</strong>. Spend my evenings learning JS etc blah blah</p>
+				<p class="pitch__intro">London based Front End Developer. Building websites for range of big brands. Personable, understanding requirements. Upbeat. Keep it simple.</p>
 			</div>		
 	
 		</section>
@@ -56,26 +70,26 @@
 
 				<div class="skill">
 					<div class="skill__placeholder"></div>
-					<h2 class="skill__title">HTML</h2>
-					<p class="skill__intro">I write accessible HTML, blah blah</p>
+					<h3 class="skill__title">HTML</h3>
+					<p class="skill__intro">I aim to write clear, consise &amp; meaningful HTML, easily understood by screen reading devices and fellow devs.</p>
 				</div>
 
 				<div class="skill">
 					<div class="skill__placeholder"></div>
-					<h2 class="skill__title">CSS</h2>
-					<p class="skill__intro">I write accessible HTML, blah blah</p>
+					<h3 class="skill__title">CSS</h3>
+					<p class="skill__intro">Simple, clean CSS. Modular. Used to using pre-processors like SASS, LESS.</p>
 				</div>
 
 				<div class="skill">
 					<div class="skill__placeholder"></div>
-					<h2 class="skill__title">JavaScript</h2>
-					<p class="skill__intro">I write accessible HTML, blah blah</p>
+					<h3 class="skill__title">JavaScript</h3>
+					<p class="skill__intro">Worked to various design patterns. Vanilla javaScript. ES6 features. Also used jQuery in the past.</p>
 				</div>
 
 				<div class="skill">
 					<div class="skill__placeholder"></div>
-					<h2 class="skill__title">Performance</h2>
-					<p class="skill__intro">I write accessible HTML, blah blah</p>
+					<h3 class="skill__title">Performance</h3>
+					<p class="skill__intro">Interested in making sites perform as quickly and smoothly as possible. Often found poring over Google's SuperCharged videos</p>
 				</div>
 
 			</div>
@@ -92,11 +106,11 @@
 					<h3 class="examples__header">Examples of my work</h3>
 
 					<p class="example__intro">
-						I've also built campaign websites for brands including <strong>Renault</strong>, <strong>McCain</strong>, <strong>eBay</strong>, <strong>Cetaphil</strong> and <strong>Huawei</strong>.
+						I've built campaign websites for brands including <strong>Renault</strong>, <strong>McCain</strong>, <strong>eBay</strong>, <strong>Cetaphil</strong> and <strong>Huawei</strong>.
 					</p>
 
 					<p class="example__intro">
-						Here's a couple of examples of my work&hellip;
+						Here's a couple of recent examples of my work&hellip;
 					</p>
 
 				</div>
@@ -110,7 +124,7 @@
 						</div>
 						<div class="example__description">
 							<h4 class="example__title">Huawei</h4>
-							<p class="example__intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius lorem elit, sed venenatis risus semper nec. Sed convallis, lorem sed mollis aliquet, orci urna lacinia quam, eget suscipit mi lectus ut neque.</p>
+							<p class="example__intro">A site for the Chinese telecommunications giant Huawei, in conjunction with Trusted Reviews.</p>
 						</div>
 					</div>
 
@@ -121,7 +135,7 @@
 						</div>
 						<div class="example__description">
 							<h4 class="example__title">English Trainer in London</h4>
-							<p class="example__intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius lorem elit, sed venenatis risus semper nec. Sed convallis, lorem sed mollis aliquet, orci urna lacinia quam, eget suscipit mi lectus ut neque.</p>
+							<p class="example__intro">This was a site build for my brother, which included blah blah. Also convinving my work to allow us to take a few rooftop images over London!</p>
 						</div>
 					</div>
 
@@ -138,30 +152,25 @@
 
 				<h3 class="about__header">About me</h3>
 
-				<!-- <div class="about__images">
-					<img class="about__pic about__pic--one" src="/img/home__image-520x390.jpg" alt="">
-					<img class="about__pic about__pic--two" src="/img/home__image1-520x390.jpg" alt="">
-					<img class="about__pic about__pic--three" src="/img/home__image-520x390.jpg" alt="">
-					<img class="about__pic about__pic--four" src="/img/home__image1-520x390.jpg" alt="">
-				</div> -->
-
-				
 				<div class="about__intro">
 					
-					<p class="about__text">Mention Birkbeck! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius lorem elit, sed venenatis risus semper nec. Sed convallis, lorem sed mollis aliquet, orci urna lacinia quam, eget suscipit mi lectus ut neque.</p>
+					<p class="about__text">I got into web development 6 years ago, coding along at night to videos by Stefan Mischtook, and spending weekends studying at Birkbeck College in London (where I achieved a distinction in a postgraduate certificate in web design and development). Since then I've been working at the publisher Time Inc. (UK) Ltd, where I've been building websites for a number of top brands in conjunction with Time Inc titles like Marie Claire, Look and Trusted Reviews.</p>
 
-					<p class="about__text">Travel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius lorem elit, sed venenatis risus semper nec. Sed convallis, lorem sed mollis aliquet, orci urna lacinia quam, eget suscipit mi lectus ut neque.</p>
+					<p class="about__text">I'm a big fan of self-improvement and spend a few nights a week reading blogs and studying via sources like Treehouse, Wes Bos &amp; Google/Audicity.</p>
+
+					<p class="about__text">Outside of work I'm a big sports fan (footie and tennis), I love to travel, and  </p>
 
 					<p class="about__text">Sports. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius lorem elit, sed venenatis risus semper nec. Sed convallis, lorem sed mollis aliquet, orci urna lacinia quam, eget suscipit mi lectus ut neque.</p>
 
-					<p class="about__text">Family life. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius lorem elit, sed venenatis risus semper nec. Sed convallis, lorem sed mollis aliquet, orci urna lacinia quam, eget suscipit mi lectus ut neque.</p>		
+					<p class="about__text">Family life. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius lorem elit, sed venenatis risus semper nec. Sed convallis, lorem sed mollis aliquet, orci urna lacinia quam, eget suscipit mi lectus ut neque.</p>	
+
+					<p class="about__text">Recent/current training: javaScript course Treehouse, javaScript30 Wes Bos, Accessibilty Audicty, PWA Google.</p>	
 			
 				</div>
 
-				<div class="about__cv-holder">
-					<div class="about__cv">
-						Download CV
-					</div>
+				<div class="about__pic-holder">
+					<!-- Look up if best to have border radius on image itself or parent -->
+					<img class="about__pic" src="/img/chris-mugshot.jpg" alt="Chris Reidy">
 				</div>
 				
 			</div>
@@ -183,7 +192,9 @@
 					<p><a class="contact__linkedin" href="https://www.linkedin.com/in/chrisreidy">Or via LinkedIn</a></p>
 				</div>
 
-				<img src="http://www.fillmurray.com/300/300" alt="Chris Reidy" class="contact__image">
+				<div class="contact__pic-holder">
+					Download CV
+				</div>
 
 			</div>
 
